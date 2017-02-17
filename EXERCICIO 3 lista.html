@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title> Calculadora Simples 1.0 </title>
+		
+		<script>
+			function somar(){
+				var vl1 = document.getElementById("valor1").value;
+				var vl2 = document.getElementById("valor2").value;
+				var result;
+				
+				result = parseInt(vl1) + parseInt(vl2);
+				
+				var total = document.getElementById("result");
+				
+				total.value = result;
+				
+				alert(vl1 + " + " + vl2 + " = "+ result);
+				
+			}
+		</script>
+	</head>
+	
+	<body>
+		<form>
+		<br/><br/><br/><br/>
+		<label id="lblUsername"><font size="20" face="TREBUCHET MS" color="#00FA9A"><big><u><b><center> CALCULADORA SIMPLES 1.0 </b></u></big></font></center></label> 
+		<br/><br/>
+
+		<label id="n1"><font color="red"> Numero 1 </font></label>
+		<input type="text" value="" name="txtValor1" id="valor1">		
+		<br/><br/>
+		<label id="n2"><font color="blue"> Numero 2 </font></label>
+		<input type="text" value="" name="txtValor2" id="valor2">
+		
+		<br/><br/><br/>
+		
+		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="button" onclick="somar();" value="Somar" name="botaoSomar" id="botaoSomar">
+		
+		<br/><br/><br/>
+		
+		<label id="resultado"><font color="gray"> Resultado </font></label>
+		<input type="text" value="" name="txtResultado" id="result">
+		
+		<br/><br/><r/><br/><br/>
+		
+		<label><font color="green"> by Diego Navarro </font><label>
+		</form>
+	</body>
+
+</html>
