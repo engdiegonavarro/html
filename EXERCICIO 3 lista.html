@@ -3,19 +3,60 @@
 		<title> Calculadora Simples 1.0 </title>
 		
 		<script>
-			function somar(){
+
+			function somar(){				
 				var vl1 = document.getElementById("valor1").value;
 				var vl2 = document.getElementById("valor2").value;
 				var result;
 				
-				result = parseInt(vl1) + parseInt(vl2);
+				result = parseInt(vl1) + parseInt(vl2);		
+				
+				var total = document.getElementById("result");
+				total.value = result;
+				
+				alert(vl1 + " + " + vl2 + " = "+ result);
+			}
+			
+			function subtrair(){
+				var vl1 = document.getElementById("valor1").value;
+				var vl2 = document.getElementById("valor2").value;
+				var result;
+				
+				result = parseInt(vl1) - parseInt(vl2);
 				
 				var total = document.getElementById("result");
 				
 				total.value = result;
 				
-				alert(vl1 + " + " + vl2 + " = "+ result);
+				alert(vl1 + " - " + vl2 + " = " + result);
+			}
+			
+			function multiplicar(){
+				var vl1 = document.getElementById("valor1").value;
+				var vl2 = document.getElementById("valor2").value;
+				var result;
 				
+				result = parseInt(vl1) * parseInt(vl2);
+				
+				var total = document.getElementById("result");
+				
+				total.value = result;
+				
+				alert(vl1 + " * " + vl2 + " = " + result);
+			}
+			
+			function dividir(){
+				var vl1 = document.getElementById("valor1").value;
+				var vl2 = document.getElementById("valor2").value;
+				var result;
+				
+				result = parseInt(vl1) / parseInt(vl2);
+				
+				var total = document.getElementById("result");
+				
+				total.value = result;
+				
+				alert(vl1 + " / " + vl2 + " = " + result);
 			}
 		</script>
 	</head>
@@ -23,27 +64,41 @@
 	<body>
 		<form>
 		<br/><br/><br/><br/>
-		<label id="lblUsername"><font size="20" face="TREBUCHET MS" color="#00FA9A"><big><u><b><center> CALCULADORA SIMPLES 1.0 </b></u></big></font></center></label> 
+		
+		<center><img src= "http://thumb10.shutterstock.com/thumb_large/1450451/150158273/stock-vector-calculator-cartoon-vector-and-illustration-hand-drawn-sketch-style-isolated-on-white-150158273.jpg"></center>
+		<label id="lblUsername"><font size="20" face="TREBUCHET MS" color="#00FA9A"><big><u><b><center> CALCULADORA SIMPLES 1.0 </b></u></big></font></center></label> 		
 		<br/><br/>
 
+		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 		<label id="n1"><font color="red"> Numero 1 </font></label>
 		<input type="text" value="" name="txtValor1" id="valor1">		
 		<br/><br/>
+		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 		<label id="n2"><font color="blue"> Numero 2 </font></label>
 		<input type="text" value="" name="txtValor2" id="valor2">
 		
 		<br/><br/><br/>
 		
-		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="button" onclick="somar();" value="Somar" name="botaoSomar" id="botaoSomar">
-		
+		&emsp;&emsp;&emsp;&emsp;&emsp;
+		<input type="button" onclick="somar();" value=" + " name="botaoSomar" id="botaoSomar">
+		&emsp;&emsp;&emsp;
+		<input type="button" onclick="subtrair();" value=" - " name="botaoSubtrair" id="botaoSubtrair">
+		&emsp;&emsp;&emsp;
+		<input type="button" onclick="multiplicar();" value=" * " name="botaoMult" id="bontaoMult">
+		&emsp;&emsp;&emsp;
+		<input type="button" onclick="dividir();" value=" / " name="botaoDiv" id="botaodiv">
+		&emsp;&emsp;&emsp;
+		<input type="button" onclick="porcent();" value=" % " name="botaoPorc" id="botaoPorc">
 		<br/><br/><br/>
 		
+		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 		<label id="resultado"><font color="gray"> Resultado </font></label>
 		<input type="text" value="" name="txtResultado" id="result">
 		
 		<br/><br/><r/><br/><br/>
 		
-		<label><font color="green"> by Diego Navarro </font><label>
+		<label><center><font color="green"> by Diego Navarro </font><label></center>
+		<label><center><font color="green"> Brazil - 2017 </font><label></center>
 		</form>
 	</body>
 
